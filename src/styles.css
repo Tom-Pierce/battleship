@@ -30,4 +30,15 @@ body{
     width: var(--board-height);
     height: var(--board-height);
     border: 1px solid black;
+    display: flex;
+}
+
+.board-square{
+    width: calc(var(--board-height)/10);
+    height: calc(var(--board-height)/10);
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 4rem;
 }

@@ -16,7 +16,7 @@
   \**************************************************************/
 /***/ ((module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var _node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../node_modules/css-loader/dist/runtime/noSourceMaps.js */ \"./node_modules/css-loader/dist/runtime/noSourceMaps.js\");\n/* harmony import */ var _node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../node_modules/css-loader/dist/runtime/api.js */ \"./node_modules/css-loader/dist/runtime/api.js\");\n/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__);\n// Imports\n\n\nvar ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));\n___CSS_LOADER_EXPORT___.push([module.id, \"@import url(https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap);\"]);\n// Module\n___CSS_LOADER_EXPORT___.push([module.id, `:root{\n    --board-height: 40vh\n}\n\n*{\n    padding: 0;\n    margin: 0;\n    box-sizing: border-box;\n}\n\nbody{\n    font-family: \"Roboto\", Arial, sans-serif;\n    width: 100vw;\n    height: 100vh;\n    display: flex;\n    flex-direction: column;\n    align-items: center;\n}\n\n.game-window{\n    margin: 10vh;\n    padding: 10vh;\n    display: flex;\n    gap: 100px;\n}\n\n.player-board,\n.ai-board{\n    width: var(--board-height);\n    height: var(--board-height);\n    border: 1px solid black;\n}`, \"\"]);\n// Exports\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);\n\n\n//# sourceURL=webpack://battleship/./src/styles.css?./node_modules/css-loader/dist/cjs.js");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var _node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../node_modules/css-loader/dist/runtime/noSourceMaps.js */ \"./node_modules/css-loader/dist/runtime/noSourceMaps.js\");\n/* harmony import */ var _node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../node_modules/css-loader/dist/runtime/api.js */ \"./node_modules/css-loader/dist/runtime/api.js\");\n/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__);\n// Imports\n\n\nvar ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));\n___CSS_LOADER_EXPORT___.push([module.id, \"@import url(https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap);\"]);\n// Module\n___CSS_LOADER_EXPORT___.push([module.id, `:root{\n    --board-height: 40vh\n}\n\n*{\n    padding: 0;\n    margin: 0;\n    box-sizing: border-box;\n}\n\nbody{\n    font-family: \"Roboto\", Arial, sans-serif;\n    width: 100vw;\n    height: 100vh;\n    display: flex;\n    flex-direction: column;\n    align-items: center;\n}\n\n.game-window{\n    margin: 10vh;\n    padding: 10vh;\n    display: flex;\n    gap: 100px;\n}\n\n.player-board,\n.ai-board{\n    width: var(--board-height);\n    height: var(--board-height);\n    border: 1px solid black;\n    display: flex;\n}\n\n.board-square{\n    width: calc(var(--board-height)/10);\n    height: calc(var(--board-height)/10);\n    border: 1px solid black;\n    display: flex;\n    justify-content: center;\n    align-items: center;\n    font-size: 4rem;\n}`, \"\"]);\n// Exports\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);\n\n\n//# sourceURL=webpack://battleship/./src/styles.css?./node_modules/css-loader/dist/cjs.js");
 
 /***/ }),
 
@@ -110,6 +110,46 @@ eval("\n\n/* istanbul ignore next  */\nfunction styleTagTransform(css, styleElem
 
 /***/ }),
 
+/***/ "./src/factories/createGameboard.js":
+/*!******************************************!*\
+  !*** ./src/factories/createGameboard.js ***!
+  \******************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var _createShip__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./createShip */ \"./src/factories/createShip.js\");\n/* harmony import */ var _createSquare__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./createSquare */ \"./src/factories/createSquare.js\");\n\n\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (() => {\n  const board = [];\n  const ships = [];\n  let gameOver = false;\n  // Create a 2D array of squares\n  for (let i = 0; i < 10; i += 1) {\n    const boardRow = [];\n    for (let j = 0; j < 10; j += 1) {\n      const square = (0,_createSquare__WEBPACK_IMPORTED_MODULE_1__[\"default\"])();\n      boardRow.push(square);\n    }\n    board.push(boardRow);\n  }\n\n  // Create a ship with the given parameters and place it on the board\n  const placeShip = (x, y, shipLength, isVertical) => {\n    const ship = (0,_createShip__WEBPACK_IMPORTED_MODULE_0__[\"default\"])(x, y, shipLength, isVertical);\n    ships.push(ship);\n    // Every part of the ship needs to be placed on the board\n    ship.positions.forEach((position) => {\n      board[position[1]][position[0]].placeShip();\n    });\n  };\n\n  const arraysAreEqual = (arr1, arr2) => {\n    // Loop through each element in the arrays and compare them, if any aren't equal, return false\n    for (let i = 0; i < arr1.length; i += 1) {\n      if (arr1[i] !== arr2[i]) {\n        return false;\n      }\n    }\n    return true;\n  };\n\n  const checkGameOver = () => {\n    // If every ship is sunk, set gameOver to true\n    if (ships.every((ship) => ship.isSunk())) gameOver = true;\n  };\n\n  // Checks if the position has a ship, if it does find the ship and hit it\n  const receiveAttack = (x, y) => {\n    if (board[y][x].isShip) {\n      ships.forEach((ship) => {\n        ship.positions.forEach((position) => {\n          if (arraysAreEqual(position, [x, y])) {\n            ship.hit();\n          }\n        });\n      });\n    } else {\n      // If there is no ship, hit the water to mark the square as shot\n      board[y][x].shoot();\n    }\n    checkGameOver();\n  };\n  return {\n    placeShip,\n    receiveAttack,\n    board,\n    ships,\n    get gameOver() {\n      return gameOver;\n    },\n  };\n});\n\n\n//# sourceURL=webpack://battleship/./src/factories/createGameboard.js?");
+
+/***/ }),
+
+/***/ "./src/factories/createPlayer.js":
+/*!***************************************!*\
+  !*** ./src/factories/createPlayer.js ***!
+  \***************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var _createGameboard__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./createGameboard */ \"./src/factories/createGameboard.js\");\n\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ((name) => {\n  const gameboard = (0,_createGameboard__WEBPACK_IMPORTED_MODULE_0__[\"default\"])();\n\n  const takeShot = (x, y, opponent) => {\n    opponent.gameboard.receiveAttack(x, y);\n  };\n  return {\n    takeShot,\n    get name() {\n      return name;\n    },\n    get gameboard() {\n      return gameboard;\n    },\n  };\n});\n\n\n//# sourceURL=webpack://battleship/./src/factories/createPlayer.js?");
+
+/***/ }),
+
+/***/ "./src/factories/createShip.js":
+/*!*************************************!*\
+  !*** ./src/factories/createShip.js ***!
+  \*************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ((x, y, shipLength, isVertical) => {\n  let hits = 0;\n\n  const hit = () => {\n    hits += 1;\n  };\n\n  const isSunk = () => {\n    if (shipLength === hits) return true;\n    return false;\n  };\n  // Returns an array of all the positions that the ship takes depending on length and direction is is placed\n  const getShipPosition = () => {\n    const positionsArr = [];\n    if (isVertical) {\n      for (let i = 0; i < shipLength; i += 1) {\n        const position = [];\n        position.push(x, y + i);\n        positionsArr.push(position);\n      }\n    } else {\n      for (let i = 0; i < shipLength; i += 1) {\n        const position = [];\n        position.push(x + i, y);\n        positionsArr.push(position);\n      }\n    }\n    return positionsArr;\n  };\n  const positions = getShipPosition();\n  return {\n    hit,\n    isSunk,\n    get positions() {\n      return positions;\n    },\n  };\n});\n\n\n//# sourceURL=webpack://battleship/./src/factories/createShip.js?");
+
+/***/ }),
+
+/***/ "./src/factories/createSquare.js":
+/*!***************************************!*\
+  !*** ./src/factories/createSquare.js ***!
+  \***************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n// The squares are used to fill the board and mark whether a slot has been shot at or contains a ship\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (() => {\n  let isShot = false;\n  let isShip = false;\n\n  const shoot = () => {\n    isShot = true;\n  };\n\n  const placeShip = () => {\n    isShip = true;\n  };\n\n  return {\n    get isShot() {\n      return isShot;\n    },\n    get isShip() {\n      return isShip;\n    },\n    shoot,\n    placeShip,\n  };\n});\n\n\n//# sourceURL=webpack://battleship/./src/factories/createSquare.js?");
+
+/***/ }),
+
 /***/ "./src/helpers/create-DOM-elements.js":
 /*!********************************************!*\
   !*** ./src/helpers/create-DOM-elements.js ***!
@@ -126,7 +166,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
   \**********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _styles_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./styles.css */ \"./src/styles.css\");\n/* harmony import */ var _initDOM__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./initDOM */ \"./src/initDOM.js\");\n\n\n\n(0,_initDOM__WEBPACK_IMPORTED_MODULE_1__[\"default\"])();\n\n\n//# sourceURL=webpack://battleship/./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _styles_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./styles.css */ \"./src/styles.css\");\n/* harmony import */ var _initDOM__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./initDOM */ \"./src/initDOM.js\");\n/* harmony import */ var _renderBoard__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./renderBoard */ \"./src/renderBoard.js\");\n/* harmony import */ var _factories_createPlayer__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./factories/createPlayer */ \"./src/factories/createPlayer.js\");\n\n\n\n\n\n(0,_initDOM__WEBPACK_IMPORTED_MODULE_1__[\"default\"])();\nconst player = (0,_factories_createPlayer__WEBPACK_IMPORTED_MODULE_3__[\"default\"])(\"Jeff\");\n(0,_renderBoard__WEBPACK_IMPORTED_MODULE_2__[\"default\"])(player.gameboard, document.getElementById(\"player-board\"));\nconst opponent = (0,_factories_createPlayer__WEBPACK_IMPORTED_MODULE_3__[\"default\"])(\"Jeremy\");\n(0,_renderBoard__WEBPACK_IMPORTED_MODULE_2__[\"default\"])(opponent.gameboard, document.getElementById(\"ai-board\"));\n\n\n//# sourceURL=webpack://battleship/./src/index.js?");
 
 /***/ }),
 
@@ -137,6 +177,36 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _sty
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var _helpers_create_DOM_elements__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./helpers/create-DOM-elements */ \"./src/helpers/create-DOM-elements.js\");\n\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (() => {\n  const titleDiv = (0,_helpers_create_DOM_elements__WEBPACK_IMPORTED_MODULE_0__.createDiv)(\"title-div\", [\"title-div\"]);\n  titleDiv.appendChild(\n    (0,_helpers_create_DOM_elements__WEBPACK_IMPORTED_MODULE_0__.createHeader)(\"title-header\", [\"title-header\"], \"h1\", \"BATTLESHIP\"),\n  );\n  document.body.appendChild(titleDiv);\n\n  const gameWindow = (0,_helpers_create_DOM_elements__WEBPACK_IMPORTED_MODULE_0__.createDiv)(\"game-window\", [\"game-window\"]);\n  document.body.appendChild(gameWindow);\n  const playerBoard = (0,_helpers_create_DOM_elements__WEBPACK_IMPORTED_MODULE_0__.createDiv)(\"player-board\", [\"player-board\"]);\n  const aiBoard = (0,_helpers_create_DOM_elements__WEBPACK_IMPORTED_MODULE_0__.createDiv)(\"ai-board\", [\"ai-board\"]);\n\n  gameWindow.appendChild(playerBoard);\n  gameWindow.appendChild(aiBoard);\n});\n\n\n//# sourceURL=webpack://battleship/./src/initDOM.js?");
+
+/***/ }),
+
+/***/ "./src/renderBoard.js":
+/*!****************************!*\
+  !*** ./src/renderBoard.js ***!
+  \****************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var _helpers_create_DOM_elements__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./helpers/create-DOM-elements */ \"./src/helpers/create-DOM-elements.js\");\n/* harmony import */ var _assets_hit_no_ship_svg__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./assets/hit-no-ship.svg */ \"./src/assets/hit-no-ship.svg\");\n/* harmony import */ var _assets_hit_ship_svg__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./assets/hit-ship.svg */ \"./src/assets/hit-ship.svg\");\n\n\n\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ((gameboard, boardDiv) => {\n  // Remove all children from the board to reset it\n  while (boardDiv.firstChild) boardDiv.removeChild(boardDiv.firstChild);\n  // For every square in the gameboard create a div\n  gameboard.board.forEach((row) => {\n    const rowDiv = (0,_helpers_create_DOM_elements__WEBPACK_IMPORTED_MODULE_0__.createDiv)(\"\", [\"board-row\"]);\n    row.forEach((square) => {\n      const squareDiv = (0,_helpers_create_DOM_elements__WEBPACK_IMPORTED_MODULE_0__.createDiv)(\"\", [\"board-square\"]);\n      // Depending on whether the square has a ship or is hit, append a different img\n      if (square.isShot && square.isShip) {\n        const hitShipImg = new Image();\n        hitShipImg.src = _assets_hit_ship_svg__WEBPACK_IMPORTED_MODULE_2__;\n        squareDiv.appendChild(hitShipImg);\n      } else if (square.isShot && !square.isShip) {\n        const hitNoShipImg = new Image();\n        hitNoShipImg.src = _assets_hit_no_ship_svg__WEBPACK_IMPORTED_MODULE_1__;\n        squareDiv.appendChild(hitNoShipImg);\n      }\n      rowDiv.appendChild(squareDiv);\n    });\n    boardDiv.appendChild(rowDiv);\n  });\n});\n\n\n//# sourceURL=webpack://battleship/./src/renderBoard.js?");
+
+/***/ }),
+
+/***/ "./src/assets/hit-no-ship.svg":
+/*!************************************!*\
+  !*** ./src/assets/hit-no-ship.svg ***!
+  \************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"e5b6315ac05dc8529b76.svg\";\n\n//# sourceURL=webpack://battleship/./src/assets/hit-no-ship.svg?");
+
+/***/ }),
+
+/***/ "./src/assets/hit-ship.svg":
+/*!*********************************!*\
+  !*** ./src/assets/hit-ship.svg ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"1ded1e99216871d2a3ae.svg\";\n\n//# sourceURL=webpack://battleship/./src/assets/hit-ship.svg?");
 
 /***/ })
 
@@ -191,6 +261,18 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /******/ 		};
 /******/ 	})();
 /******/ 	
+/******/ 	/* webpack/runtime/global */
+/******/ 	(() => {
+/******/ 		__webpack_require__.g = (function() {
+/******/ 			if (typeof globalThis === 'object') return globalThis;
+/******/ 			try {
+/******/ 				return this || new Function('return this')();
+/******/ 			} catch (e) {
+/******/ 				if (typeof window === 'object') return window;
+/******/ 			}
+/******/ 		})();
+/******/ 	})();
+/******/ 	
 /******/ 	/* webpack/runtime/hasOwnProperty shorthand */
 /******/ 	(() => {
 /******/ 		__webpack_require__.o = (obj, prop) => (Object.prototype.hasOwnProperty.call(obj, prop))
@@ -205,6 +287,29 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /******/ 			}
 /******/ 			Object.defineProperty(exports, '__esModule', { value: true });
 /******/ 		};
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/publicPath */
+/******/ 	(() => {
+/******/ 		var scriptUrl;
+/******/ 		if (__webpack_require__.g.importScripts) scriptUrl = __webpack_require__.g.location + "";
+/******/ 		var document = __webpack_require__.g.document;
+/******/ 		if (!scriptUrl && document) {
+/******/ 			if (document.currentScript)
+/******/ 				scriptUrl = document.currentScript.src;
+/******/ 			if (!scriptUrl) {
+/******/ 				var scripts = document.getElementsByTagName("script");
+/******/ 				if(scripts.length) {
+/******/ 					var i = scripts.length - 1;
+/******/ 					while (i > -1 && !scriptUrl) scriptUrl = scripts[i--].src;
+/******/ 				}
+/******/ 			}
+/******/ 		}
+/******/ 		// When supporting browsers where an automatic publicPath is not supported you must specify an output.publicPath manually via configuration
+/******/ 		// or pass an empty string ("") and set the __webpack_public_path__ variable from your code to use your own logic.
+/******/ 		if (!scriptUrl) throw new Error("Automatic publicPath is not supported in this browser");
+/******/ 		scriptUrl = scriptUrl.replace(/#.*$/, "").replace(/\?.*$/, "").replace(/\/[^\/]+$/, "/");
+/******/ 		__webpack_require__.p = scriptUrl;
 /******/ 	})();
 /******/ 	
 /******/ 	/* webpack/runtime/nonce */
