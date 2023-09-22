@@ -16,8 +16,8 @@ export default () => {
   }
 
   // Create a ship with the given parameters and place it on the board
-  const placeShip = (x, y, shipLength, isVertical) => {
-    const ship = createShip(x, y, shipLength, isVertical);
+  const placeShip = (x, y, shipLength, isHorizontal) => {
+    const ship = createShip(x, y, shipLength, isHorizontal);
     ships.push(ship);
     // Every part of the ship needs to be placed on the board
     ship.positions.forEach((position) => {

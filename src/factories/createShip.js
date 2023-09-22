@@ -1,4 +1,4 @@
-export default (x, y, shipLength, isVertical) => {
+export default (x, y, shipLength, isHorizontal) => {
   let hits = 0;
 
   const hit = () => {
@@ -12,7 +12,7 @@ export default (x, y, shipLength, isVertical) => {
   // Returns an array of all the positions that the ship takes depending on length and direction is is placed
   const getShipPosition = () => {
     const positionsArr = [];
-    if (isVertical) {
+    if (isHorizontal) {
       for (let i = 0; i < shipLength; i += 1) {
         const position = [];
         position.push(x, y + i);

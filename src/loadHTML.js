@@ -1,4 +1,5 @@
 import { createDiv, createHeader } from "./helpers/create-DOM-elements";
+import humanTurn from "./playerTurn";
 
 export const loadHTML = () => {
   const titleDiv = createDiv("title-div", ["title-div"]);
@@ -19,26 +20,24 @@ export const loadHTML = () => {
 const renderShips = (player, boardDiv) => {
   boardDiv.childNodes.forEach((rowDiv, i) => {
     rowDiv.childNodes.forEach((squareDiv, j) => {
-      if (player.gameboard.board[j][i].isShip)
+      if (player.gameboard.board[j][i].isShip) {
         squareDiv.classList.add("ship-square");
+      }
     });
   });
 };
-
 export const loadGameboard = (player, boardDiv) => {
   // For every square in the gameboard create a div
   player.gameboard.board.forEach((row, i) => {
     const rowDiv = createDiv("", ["board-row"]);
     row.forEach((square, j) => {
       const squareDiv = createDiv("", ["board-square"]);
-      if (player.isHuman) {
+      if (player.isHuman) squareDiv.classList.add("human-square");
+      else {
         // If the "player" is the computer, add event listeners so we can shoot it
-        renderShips(player, boardDiv);
-        squareDiv.classList.add("human-square");
-      } else {
         squareDiv.addEventListener("click", () => {
           squareDiv.classList.add("shot-square");
-          player.opponent.takeShot(i, j, player);
+          humanTurn(i, j, player.opponent);
         });
         squareDiv.classList.add("computer-square");
       }
@@ -46,4 +45,5 @@ export const loadGameboard = (player, boardDiv) => {
     });
     boardDiv.appendChild(rowDiv);
   });
+  if (player.isHuman) renderShips(player, boardDiv);
 };

@@ -8,6 +8,6 @@ computer.opponent = player;
 test("Player attack", () => {
   computer.gameboard.placeShip(0, 0, 1, true);
   expect(computer.gameboard.gameOver).toBe(false);
-  player.takeShot(0, 0, computer);
+  player.takeShot(0, 0);
   expect(computer.gameboard.gameOver).toBe(true);
 });
