@@ -1,5 +1,5 @@
 import { computerGuess } from "./computer-ai/computer-guess";
-import updateBoard from "./updateBoard";
+import updateBoard from "./update-board";
 
 const computerTurn = (computer) => {
   const guess = computerGuess(computer.opponent);

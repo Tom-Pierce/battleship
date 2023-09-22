@@ -1,4 +1,4 @@
-import createShip from "../createShip";
+import createShip from "../create-ship";
 
 const submarine = createShip(6, 6, 3, false);
 test("Sunk", () => {

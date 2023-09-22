@@ -1,5 +1,5 @@
-import createShip from "./createShip";
-import createSquare from "./createSquare";
+import createShip from "./create-ship";
+import createSquare from "./create-square";
 
 export default () => {
   const board = [];

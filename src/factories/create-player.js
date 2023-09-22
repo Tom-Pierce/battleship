@@ -1,4 +1,4 @@
-import createGameboard from "./createGameboard";
+import createGameboard from "./create-gameboard";
 
 export default (isHuman) => {
   const gameboard = createGameboard();

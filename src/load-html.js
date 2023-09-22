@@ -1,5 +1,5 @@
 import { createDiv, createHeader } from "./helpers/create-DOM-elements";
-import humanTurn from "./playerTurn";
+import humanTurn from "./player-turn";
 
 export const loadHTML = () => {
   const titleDiv = createDiv("title-div", ["title-div"]);

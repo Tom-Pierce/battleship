@@ -1,4 +1,4 @@
-import createPlayer from "../../factories/createPlayer";
+import createPlayer from "../../factories/create-player";
 import { computerGuess } from "../computer-guess";
 
 describe("computerGuess function", () => {
