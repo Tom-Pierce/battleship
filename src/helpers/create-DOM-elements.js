@@ -17,4 +17,14 @@ const createHeader = (headerId, headerClasses, headerType, text) => {
   return header;
 };
 
-export { createDiv, createHeader };
+const createImg = (imgId, imgClasses, imgSrc) => {
+  const img = document.createElement("img");
+  if (imgId) img.id = imgId;
+  imgClasses.forEach((imgClass) => {
+    img.classList.add(imgClass);
+  });
+  img.src = imgSrc;
+  return img;
+};
+
+export { createDiv, createHeader, createImg };
