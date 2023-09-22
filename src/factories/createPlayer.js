@@ -1,18 +1,25 @@
 import createGameboard from "./createGameboard";
 
-export default (name) => {
+export default (isHuman) => {
   const gameboard = createGameboard();
+  let opponent;
 
-  const takeShot = (x, y, opponent) => {
+  const takeShot = (x, y) => {
     opponent.gameboard.receiveAttack(x, y);
   };
   return {
     takeShot,
-    get name() {
-      return name;
+    get isHuman() {
+      return isHuman;
     },
     get gameboard() {
       return gameboard;
+    },
+    get opponent() {
+      return opponent;
+    },
+    set opponent(player) {
+      opponent = player;
     },
   };
 };

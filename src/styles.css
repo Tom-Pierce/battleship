@@ -26,7 +26,7 @@ body{
 }
 
 .player-board,
-.ai-board{
+.computer-board{
     width: var(--board-height);
     height: var(--board-height);
     border: 1px solid black;
