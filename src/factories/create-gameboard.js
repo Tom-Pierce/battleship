@@ -1,3 +1,4 @@
+import endGame from "../end-game";
 import createShip from "./create-ship";
 import createSquare from "./create-square";
 
@@ -35,13 +36,16 @@ export default () => {
     return true;
   };
 
-  const checkGameOver = () => {
+  const checkGameOver = (winner) => {
     // If every ship is sunk, set gameOver to true
-    if (ships.every((ship) => ship.isSunk())) gameOver = true;
+    if (ships.every((ship) => ship.isSunk())) {
+      gameOver = true;
+      endGame(winner);
+    }
   };
 
   // Checks if the position has a ship, if it does find the ship and hit it
-  const receiveAttack = (x, y) => {
+  const receiveAttack = (x, y, loser) => {
     if (board[y][x].isShip) {
       ships.forEach((ship) => {
         ship.positions.forEach((position) => {
@@ -55,7 +59,7 @@ export default () => {
       // If there is no ship, hit the water to mark the square as shot
       board[y][x].shoot();
     }
-    checkGameOver();
+    checkGameOver(loser.opponent);
   };
   return {
     placeShip,

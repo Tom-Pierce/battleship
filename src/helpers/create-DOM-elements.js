@@ -27,4 +27,15 @@ const createImg = (imgId, imgClasses, imgSrc) => {
   return img;
 };
 
-export { createDiv, createHeader, createImg };
+const createButton = (buttonId, buttonClasses, buttonText, buttonType) => {
+  const button = document.createElement("button");
+  if (buttonId) button.id = buttonId;
+  buttonClasses.forEach((buttonClass) => {
+    button.classList.add(buttonClass);
+  });
+  button.textContent = buttonText;
+  button.type = buttonType;
+  return button;
+};
+
+export { createDiv, createHeader, createImg, createButton };

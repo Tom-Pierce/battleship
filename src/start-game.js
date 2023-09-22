@@ -1,5 +1,5 @@
-import { loadHTML, loadGameboard } from "./load-html";
 import createPlayer from "./factories/create-player";
+import { loadGameboard, loadHTML } from "./load-html";
 
 export default () => {
   // Initiate HTMl and create players with ship layout

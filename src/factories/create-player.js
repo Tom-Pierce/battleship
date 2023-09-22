@@ -5,7 +5,7 @@ export default (isHuman) => {
   let opponent;
 
   const takeShot = (x, y) => {
-    opponent.gameboard.receiveAttack(x, y);
+    opponent.gameboard.receiveAttack(x, y, opponent);
   };
   return {
     takeShot,
