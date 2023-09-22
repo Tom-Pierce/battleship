@@ -16,6 +16,15 @@ export const loadHTML = () => {
   gameWindow.appendChild(aiBoard);
 };
 
+const renderShips = (player, boardDiv) => {
+  boardDiv.childNodes.forEach((rowDiv, i) => {
+    rowDiv.childNodes.forEach((squareDiv, j) => {
+      if (player.gameboard.board[j][i].isShip)
+        squareDiv.classList.add("ship-square");
+    });
+  });
+};
+
 export const loadGameboard = (player, boardDiv) => {
   // For every square in the gameboard create a div
   player.gameboard.board.forEach((row, i) => {
@@ -27,7 +36,7 @@ export const loadGameboard = (player, boardDiv) => {
         squareDiv.addEventListener("click", () => {
           player.opponent.takeShot(i, j, player);
         });
-      }
+      } else renderShips(player, boardDiv);
       rowDiv.appendChild(squareDiv);
     });
     boardDiv.appendChild(rowDiv);

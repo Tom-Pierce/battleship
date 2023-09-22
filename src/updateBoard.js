@@ -5,7 +5,8 @@ import { createImg } from "./helpers/create-DOM-elements";
 export default (player, boardDiv) => {
   boardDiv.childNodes.forEach((rowDiv, i) => {
     rowDiv.childNodes.forEach((squareDiv, j) => {
-      if (squareDiv.firstChild) squareDiv.removeChild(squareDiv.firstChild);
+      // If there is already an image, there is no need to update it
+      if (squareDiv.firstChild) return;
       // Depending on whether the square has a ship or is hit, append a different img
       const square = player.gameboard.board[j][i];
       if (square.isShot && square.isShip) {

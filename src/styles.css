@@ -31,6 +31,11 @@ body{
     height: var(--board-height);
     border: 1px solid black;
     display: flex;
+    flex-direction: column;
+}
+
+.board-row{
+    display: flex;
 }
 
 .board-square{
@@ -41,4 +46,8 @@ body{
     justify-content: center;
     align-items: center;
     font-size: 4rem;
+}
+
+.ship-square{
+    background-color: grey;
 }

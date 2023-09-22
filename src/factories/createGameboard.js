@@ -47,6 +47,7 @@ export default () => {
         ship.positions.forEach((position) => {
           if (arraysAreEqual(position, [x, y])) {
             ship.hit();
+            board[y][x].shoot();
           }
         });
       });
