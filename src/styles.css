@@ -48,6 +48,10 @@ body{
     font-size: 4rem;
 }
 
+.board-square.computer-square:not(.shot-square):hover{
+    background-color: lightgrey;
+}
+
 .ship-square{
     background-color: grey;
 }

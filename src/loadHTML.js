@@ -31,12 +31,17 @@ export const loadGameboard = (player, boardDiv) => {
     const rowDiv = createDiv("", ["board-row"]);
     row.forEach((square, j) => {
       const squareDiv = createDiv("", ["board-square"]);
-      // If the "player" is the computer, add event listeners so we can shoot it
-      if (!player.isHuman) {
+      if (player.isHuman) {
+        // If the "player" is the computer, add event listeners so we can shoot it
+        renderShips(player, boardDiv);
+        squareDiv.classList.add("human-square");
+      } else {
         squareDiv.addEventListener("click", () => {
+          squareDiv.classList.add("shot-square");
           player.opponent.takeShot(i, j, player);
         });
-      } else renderShips(player, boardDiv);
+        squareDiv.classList.add("computer-square");
+      }
       rowDiv.appendChild(squareDiv);
     });
     boardDiv.appendChild(rowDiv);
